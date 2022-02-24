@@ -1,0 +1,19 @@
+cc_library {
+    name: "faceunlock_vendor_dependencies",
+    srcs: [
+        "faceunlock_vendor_dependencies_dummy.cpp",
+    ],
+    cpp_std: "experimental",
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+    ],
+    compile_multilib: "64",
+    required: [
+        "libFaceDetectCA",
+        "libmegface",
+        "libMegviiUnlock",
+        "libMegviiUnlock-jni-1.2",
+    ],
+}
